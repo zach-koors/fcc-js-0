@@ -1,2 +1,2 @@
-# fcc-js-calc
+js-calc
  javascript calculator
