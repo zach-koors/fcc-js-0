@@ -1,2 +1,2 @@
-# fcc-js-0
- javascript playground
+# fcc-js-calc
+ javascript calculator
