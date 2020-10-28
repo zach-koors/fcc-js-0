@@ -3,6 +3,11 @@ body{
   font-weight: 100;
   background-color: black;
 }
-#container{
-  
+#calculator{
+  width: 50%;
+  height: 40em;
+  margin: 2em auto;
+  border-style: solid;
+  border-color: white;
+  border-radius: .5em;
 }
