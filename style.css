@@ -25,13 +25,15 @@ body{
   height: 20px;
   margin: 0 20px;
   padding-top: 10px;
+  font-size: 1.25em;
 }
 #output{
   text-align: right;
   height: 60px;
   margin: 0 20px;
   padding-top: 5px;
-  font-size: 1.5em;
+  font-size: 2em;
+  font-weight:bold;
 }
 #keyboard{
   height: 375px;
@@ -42,5 +44,19 @@ body{
   margin: 12.5px;
   float: left;
   border-radius: 50%;
-  
+  font-size: 1.1em;
+}
+.number, .empty{
+  color: white;
+  background-color: black;
+  border-style: none;
+}
+.number, .operator{
+  cursor: pointer;
+}
+.operator:active, .number:active{
+  font-size: .8em;
+}
+.operator:focus, .number:focus, .empty:focus{
+  outline: 0;
 }
