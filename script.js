@@ -13,5 +13,39 @@ function getFormattedNumber(num){
   return value;
 }
 function printOutput(num){
-  document.querySelector('#output-value').innerText=getFormattedNumber(num);
+  if (num==''){
+    document.querySelector('#output-value').innertext=num;
+  } else {
+    document.querySelector('#output-value').innerText=getFormattedNumber(num);
+  }
+}
+function revFormattedNumber(num){
+  return Number(num.replace(/,/g,''));
+}
+
+var operator = document.querySelectorAll('.operator');
+for (var i = 0; i < operator.length; i++){
+  operator[i].addEventListener('click', function(){
+    if (this.id == 'clear'){
+      printHistory('');
+      printOutput('');
+    }
+    else if (this.id == 'backspace'){
+      var output = revFormattedNumber(getOutput).toString();
+      if(output){
+        output = output.substr(0, output.length-1);
+        printOutput(output);
+      }
+    }
+  });
+}
+var number = document.querySelectorAll('.number');
+for (var i = 0; i < number.length; i++){
+  number[i].addEventListener('click', function(){
+    var output = revFormattedNumber(getOutput());
+    if (output!= NaN){
+      output=output+this.id;
+      printOutput(output);
+    }
+  });
 }
